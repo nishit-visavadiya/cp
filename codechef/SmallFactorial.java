@@ -13,11 +13,11 @@ public class SmallFactorial {
 
         while (t-- > 0) {
             int n = sc.nextInt();
-            BigInteger f = BigInteger.ONE;
+            BigInteger factorial = BigInteger.ONE;
             for (int i = 1; i <= n; i++) {
-                f = f.multiply(BigInteger.valueOf(i));
+                factorial = factorial.multiply(BigInteger.valueOf(i));
             }
-            System.out.println(f);
+            System.out.println(factorial);
         }
         sc.close();
     }
