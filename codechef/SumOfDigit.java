@@ -4,9 +4,7 @@ import java.util.*;
 
 public class SumOfDigit {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	void sumOfDigit(){
 		Scanner sc = new Scanner(System.in);
 
 		int t = sc.nextInt();
