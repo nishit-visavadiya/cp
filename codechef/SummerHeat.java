@@ -11,7 +11,6 @@ public class SummerHeat {
 
         while (t-- > 0) {
 
-
             int xa = sc.nextInt();
             int xb = sc.nextInt();
             int Xa = sc.nextInt();
