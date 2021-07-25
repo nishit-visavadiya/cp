@@ -2,14 +2,14 @@ package array;
 
 import java.util.Scanner;
 
-public class InsertElementInArray {
+public class InsertElements {
 
     Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args)
     {
-        InsertElementInArray insertElementInArray = new InsertElementInArray();
-        insertElementInArray.insertElement();
+        InsertElements insertElements = new InsertElements();
+        insertElements.insertElement();
 
     }
 
