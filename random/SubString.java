@@ -16,10 +16,10 @@ public class SubString {
     {
         String s = getString();
 
-        int start = getInteger();
-        int end = getInteger();
+        int beginIndex = getInteger();
+        int endIndex = getInteger();
 
-        for (int i = start; i < end; i++)
+        for (int i = beginIndex; i < endIndex; i++)
         {
             System.out.print(s.charAt(i));
         }
