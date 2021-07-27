@@ -4,21 +4,30 @@ import java.util.Scanner;
 
 public class Pelindrom {
 
+    Scanner s = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner s = new Scanner(System.in);
+        Pelindrom pelindrom = new Pelindrom();
+        System.out.println(pelindrom.pelindrom());
+    }
 
-        String str = s.nextLine();
+    String pelindrom() {
+        String str1 = getString();
         String str2 = "";
 
-        for (int i = str.length() - 1; i >= 0; i--) {
-            str2 += str.charAt(i);
+        for (int i = str1.length() - 1; i >= 0; i--) {
+            str2 += str1.charAt(i);
         }
 
-        if (str.equals(str2))
-            System.out.println("pelindrom");
+        if (str1.equals(str2))
+            return "pelindrom";
         else
-            System.out.println("not pelindrom");
+            return "not pelindrom";
+    }
+
+    String getString() {
+        return s.nextLine();
     }
 
 }
