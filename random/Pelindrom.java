@@ -9,10 +9,10 @@ public class Pelindrom {
     public static void main(String[] args) {
 
         Pelindrom pelindrom = new Pelindrom();
-        System.out.println(pelindrom.pelindrom());
+        System.out.println(pelindrom.isPelindrom());
     }
 
-    String pelindrom() {
+    boolean isPelindrom() {
         String str1 = getString();
         String str2 = "";
 
@@ -21,9 +21,9 @@ public class Pelindrom {
         }
 
         if (str1.equals(str2))
-            return "pelindrom";
+            return true;
         else
-            return "not pelindrom";
+            return false;
     }
 
     String getString() {
