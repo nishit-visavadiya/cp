@@ -25,10 +25,7 @@ public class Armstrong {
             number = number / 10;
         }
 
-        if (original == sum)
-            return true;
-        else
-            return false;
+        return original == sum;
     }
 
     int getInteger()
