@@ -4,24 +4,29 @@ import java.util.*;
 
 public class SumOfDigit {
 
-	void sumOfDigit(){
-		Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        SumOfDigit sumOfDigit = new SumOfDigit();
+        sumOfDigit.getSum();
+    }
 
-		int t = sc.nextInt();
+    void getSum() {
+        Scanner sc = new Scanner(System.in);
 
-		for (int i = 0; i < t; i++) {
-			int n = sc.nextInt();
-			int sum = 0;
+        int t = sc.nextInt();
 
-			while (n > 0) {
-				sum += n % 10;
-				n /= 10;
+        for (int i = 0; i < t; i++) {
+            int n = sc.nextInt();
+            int sum = 0;
 
-			}
-			System.out.println(sum);
-		}
+            while (n > 0) {
+                sum += n % 10;
+                n /= 10;
 
-		sc.close();
-	}
+            }
+            System.out.println(sum);
+        }
+
+        sc.close();
+    }
 
 }
