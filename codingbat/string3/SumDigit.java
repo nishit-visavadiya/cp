@@ -20,9 +20,17 @@ public class SumDigit {
 
     int sumDigit(String str)
     {
-        //Integer num = Integer.parseInt(str);
-        return Integer.parseInt(str);
-        //return num;
+        int sum = 0;
+
+        for (int i = 0; i < str.length(); i++)
+        {
+            if (Character.isDigit(str.charAt(i)))
+            {
+                String temp = str.substring(i, i + 1);
+                sum += Integer.parseInt(temp);
+            }
+        }
+        return sum;
     }
 
     String getString()
