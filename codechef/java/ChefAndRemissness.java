@@ -19,9 +19,8 @@ public class ChefAndRemissness {
             if (a > b)
                 System.out.print(a + " ");
             else
-            {
                 System.out.println(b + " ");
-            }
+
             sum = a + b;
             System.out.println(sum);
         }
