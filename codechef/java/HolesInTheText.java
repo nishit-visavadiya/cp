@@ -6,36 +6,29 @@ public class HolesInTheText {
 
     Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         HolesInTheText holesInTheText = new HolesInTheText();
         holesInTheText.execute();
     }
 
-    void execute()
-    {
+    void execute() {
         int testCases = getInteger();
 
-        while (testCases --> 0)
-        {
+        while (testCases-- > 0) {
             String word = getString();
             char[] arr = word.toCharArray();
             System.out.println(countHolesInText(arr));
         }
     }
 
-    int countHolesInText(char[] arr)
-    {
+    int countHolesInText(char[] arr) {
         int count = 0;
 
-        for (char letter : arr)
-        {
-            if (letter == 'A' || letter == 'D' || letter == 'O' || letter == 'P' || letter == 'R')
-            {
+        for (char letter : arr) {
+            if (letter == 'A' || letter == 'D' || letter == 'O' || letter == 'P' || letter == 'R') {
                 count++;
             }
-            if (letter == 'B')
-            {
+            if (letter == 'B') {
                 count += 2;
             }
         }
@@ -43,13 +36,11 @@ public class HolesInTheText {
         return count;
     }
 
-    String getString()
-    {
+    String getString() {
         return sc.next();
     }
 
-    int getInteger()
-    {
+    int getInteger() {
         return sc.nextInt();
     }
 }
