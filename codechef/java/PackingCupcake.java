@@ -12,8 +12,7 @@ public class PackingCupcake {
         packingCupcake.execute();
     }
 
-    void execute()
-    {
+    void execute() {
         int testCases = getInteger();
 
         while (testCases --> 0)
