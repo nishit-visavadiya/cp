@@ -26,14 +26,9 @@ public class TheSmallestPair {
         }
     }
 
-//    int getSmallestPair(int[] arr)
-//    {
-//        return sumOfFirstTwoMinimumNumberInArray(arr);
-//    }
-
     int sumOfFirstTwoMinimumNumberInArray(int[] arr)
     {
-        int minimumElement = 0;
+        int minimumElement = Integer.MAX_VALUE;
         int secondMinimum = minimumElement;
 
         for (int i = 0; i < arr.length; i++)
