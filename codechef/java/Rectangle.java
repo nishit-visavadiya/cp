@@ -32,11 +32,7 @@ public class Rectangle {
 
     boolean isRectangle(int a, int b, int c, int d)
     {
-        if ((a == b && c == d) || (a == c && b == d) || (a == d && b == c))
-        {
-            return true;
-        }
-        return false;
+        return (a == b && c == d) || (a == c && b == d) || (a == d && b == c);
     }
 
     int getInteger()
