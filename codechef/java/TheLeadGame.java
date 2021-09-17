@@ -11,7 +11,7 @@ public class TheLeadGame {
         int n = sc.nextInt();
         int sum1 = 0, sum2 = 0;
         int lead = 0, winner = 0;
-        int difference = 0;
+        int difference;
         while (n --> 0)
         {
             int playerOne = sc.nextInt();
