@@ -17,11 +17,11 @@ public class HolesInTheText {
         while (testCases-- > 0) {
             String word = getString();
             char[] arr = word.toCharArray();
-            System.out.println(countHolesInText(arr));
+            System.out.println(countHolesInString(arr));
         }
     }
 
-    int countHolesInText(char[] arr) {
+    int countHolesInString(char[] arr) {
         int count = 0;
 
         for (char letter : arr) {
