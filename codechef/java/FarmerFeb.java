@@ -27,7 +27,7 @@ public class FarmerFeb {
 
     int countForPrimeNumber(int harvestedFromFirstField, int harvestedFromSecondField)
     {
-        int sumOfPotato = harvestedFromFirstField + harvestedFromSecondField;
+        int sumOfPotato = sumOfTwoNumbers(harvestedFromFirstField, harvestedFromSecondField);
 
         for (int currentNumber = sumOfPotato + 1; ; currentNumber++)
         {
@@ -46,6 +46,11 @@ public class FarmerFeb {
                 return false;
         }
         return true;
+    }
+
+    int sumOfTwoNumbers(int a, int b)
+    {
+        return a + b;
     }
 
     int getInteger()
