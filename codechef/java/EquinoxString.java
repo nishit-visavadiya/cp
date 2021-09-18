@@ -6,7 +6,7 @@ public class EquinoxString {
 
     Scanner sc = new Scanner(System.in);
 
-    int sarthak = 0, anuradha = 0;
+    long sarthak = 0, anuradha = 0;
 
     public static void main(String[] args)
     {
@@ -20,34 +20,34 @@ public class EquinoxString {
 
         while (testCases --> 0)
         {
-            int numberOfString = getInteger();
-            int pointsOfSarthak = getInteger();
-            int pointsOfAnuradha = getInteger();
+            int n = getInteger();
+            int a = getInteger();
+            int b = getInteger();
 
-            System.out.println(findTheCharacter(numberOfString, pointsOfSarthak,pointsOfAnuradha));
+            System.out.println(findTheCharacter(n, a, b));
         }
     }
 
     String findTheCharacter(int numberOfString, int pointsOfSarthak, int pointsOfAnuradha)
     {
-        while (numberOfString --> 0)
-        {
-            String s = getString();
+        String[] s = new String[numberOfString];
+        getString();
 
-            if (s.charAt(0) == 'E' || s.charAt(0) == 'Q' || s.charAt(0) == 'U' ||
-                    s.charAt(0) == 'I' || s.charAt(0) == 'N' || s.charAt(0) == 'O' || s.charAt(0) == 'X')
-            {
+        for (int i = 0; i < numberOfString; i++)
+        {
+            s[i] = getString();
+            if(s[i].startsWith("E") || s[i].startsWith("Q") || s[i].startsWith("U") ||
+                    s[i].startsWith("I") || s[i].startsWith("N") || s[i].startsWith("O") || s[i].startsWith("X")) {
                 sarthak += pointsOfSarthak;
             }
-            else
-            {
-                anuradha += pointsOfAnuradha;
+            else {
+                anuradha+=pointsOfAnuradha;
             }
         }
         return checkForWinner(sarthak, anuradha);
     }
 
-    String checkForWinner(int sarthak, int anuradha)
+    String checkForWinner(long sarthak, long anuradha)
     {
         if (sarthak == anuradha)
             return "DRAW";
@@ -59,7 +59,7 @@ public class EquinoxString {
 
     String getString()
     {
-        return sc.next();
+        return sc.nextLine();
     }
 
     int getInteger()
