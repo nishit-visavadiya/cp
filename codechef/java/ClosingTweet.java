@@ -15,10 +15,12 @@ public class ClosingTweet {
 
     void execute()
     {
-        int n = getInteger();
-        int k = getInteger();
-        boolean[] t = new boolean[n];
-        for (int i = 0; i < k; i++)
+        int numberOfTweets = getInteger();
+        int numberOfClicks = getInteger();
+
+        boolean[] t = new boolean[numberOfTweets];
+
+        for (int i = 0; i < numberOfClicks; i++)
         {
             String str = getString();
             if (str.equals("CLICK"))
@@ -30,8 +32,10 @@ public class ClosingTweet {
             {
                 Arrays.fill(t, false);
             }
+
             int count = 0;
-            for (int j = 0; j < n; j++)
+
+            for (int j = 0; j < numberOfTweets; j++)
             {
                 if (t[j])
                 {
