@@ -56,16 +56,16 @@ public class CopsAndThief {
         return coverHousesPerMinutes * coverMaximumHouses;
     }
 
-    int[] getArray(int size)
-    {
-        int[] arr = new int[size];
-        for (int i = 0; i < size; i++)
+        int[] getArray(int size)
         {
-            arr[i] = getInteger();
-        }
+            int[] arr = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                arr[i] = getInteger();
+            }
 
-        return arr;
-    }
+            return arr;
+        }
 
     int getInteger()
     {
