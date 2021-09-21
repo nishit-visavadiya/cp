@@ -22,16 +22,16 @@ public class HeadBob {
             String str = getString();
             char[] temp = str.toCharArray();
 
-            System.out.println(identifyIndianOrNot(temp, person));
+            System.out.println(identifyIndianOrNot(temp, str, person));
         }
     }
 
-    String identifyIndianOrNot(char[] temp, int person)
+    String identifyIndianOrNot(char[] temp, String str,int person)
     {
         String result = "";
         boolean certain = false;
 
-        for (int i = 0; i < person; i++)
+        for (int i = 0; i < str.length(); i++)
         {
             if (temp[i] == 'N')
             {
