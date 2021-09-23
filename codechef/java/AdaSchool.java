@@ -30,7 +30,7 @@ public class AdaSchool {
 
     boolean canShuffle(int row, int column)
     {
-        return row % 2 == 0 && column % 2 == 0;
+        return row % 2 == 0 || column % 2 == 0;
     }
 
     int getInteger()
