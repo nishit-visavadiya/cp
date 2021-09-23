@@ -32,9 +32,9 @@ public class ForgottenLanguage {
         for (int i = 0; i < numberOfWordInOldDictionary; i++)
         {
             if (is(numberOfWordInOldDictionary, oldWords, newWords))
-                System.out.println("Yes");
+                System.out.println("Yes ");
             else
-                System.out.println("No");
+                System.out.println("No ");
         }
     }
 
