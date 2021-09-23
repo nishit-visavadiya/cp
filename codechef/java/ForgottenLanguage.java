@@ -82,6 +82,19 @@ public class ForgottenLanguage {
         return words;
     }
 
+    boolean isStringInOldDictionary(int numberOfWordInOldDictionary,int numberOfNewWord,String[] newWords,String[] oldWords)
+    {
+        for(int i=0;i<numberOfWordInOldDictionary;i++)
+        {
+            for(int j=0;j<numberOfNewWord;j++)
+            {
+                if(oldWords[i].equals(newWords[j]))
+                    return true;
+            }
+        }
+        return false;
+    }
+
     String getString(){
         return sc.next();
     }
