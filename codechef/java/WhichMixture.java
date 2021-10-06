@@ -6,9 +6,13 @@ public class WhichMixture {
 
     Scanner scanner = new Scanner(System.in);
 
+    int AUnitOfSolid;
+    int BUnitOfSolid;
+
     public static void main(String[] args)
     {
-
+        WhichMixture whichMixture = new WhichMixture();
+        whichMixture.executeTestCases();
     }
 
     void executeTestCases()
@@ -17,29 +21,31 @@ public class WhichMixture {
 
         while (testCases --> 0)
         {
-            int AUnitOfSolid = getInteger();
-            int BUnitOfSolid = getInteger();
+            AUnitOfSolid = getInteger();
+            BUnitOfSolid = getInteger();
 
-            System.out.println(whichTypeOfMixtureDoesChefProvide(AUnitOfSolid, BUnitOfSolid));
+            System.out.println(whichTypeOfMixtureDoesChefProvide());
         }
     }
 
-    String whichTypeOfMixtureDoesChefProvide(int AUnitOfSolid, int BUnitOfSOlid)
+    String whichTypeOfMixtureDoesChefProvide()
     {
-        String mixture;
-
-        if (AUnitOfSolid > 0 && BUnitOfSOlid > 0)
-        {
-            mixture = "Solution";
-        }
-        else if (AUnitOfSolid == 0)
-        {
-            mixture = "Liquid";
-        }
+        if (bothUnitOfSolidMoreThanZero())
+            return "Solution";
+        else if (AUnitOfSolidIsZero())
+            return "Liquid";
         else
-            mixture = "Solid";
+            return "Solid";
+    }
 
-        return mixture;
+    boolean AUnitOfSolidIsZero()
+    {
+        return AUnitOfSolid == 0;
+    }
+
+    boolean bothUnitOfSolidMoreThanZero()
+    {
+        return AUnitOfSolid > 0 && BUnitOfSolid > 0;
     }
 
     int getInteger()
