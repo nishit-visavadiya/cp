@@ -6,6 +6,9 @@ public class AdaSchool {
 
     Scanner scanner = new Scanner(System.in);
 
+    int row;
+    int column;
+
     public static void main(String[] args)
     {
         AdaSchool adaSchool = new AdaSchool();
@@ -18,17 +21,17 @@ public class AdaSchool {
 
         while (testCases --> 0)
         {
-            int row = getInteger();
-            int column = getInteger();
+            row = getInteger();
+            column = getInteger();
 
-            if (canShuffle(row, column))
+            if (bothCountAreEven())
                 System.out.println("YES");
             else
                 System.out.println("NO");
         }
     }
 
-    boolean canShuffle(int row, int column)
+    boolean bothCountAreEven()
     {
         return row % 2 == 0 || column % 2 == 0;
     }
