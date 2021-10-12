@@ -6,6 +6,8 @@ public class PackingCupcake {
 
     Scanner sc = new Scanner(System.in);
 
+    int numberOfCupcakes;
+
     public static void main(String[] args)
     {
         PackingCupcake packingCupcake = new PackingCupcake();
@@ -17,12 +19,12 @@ public class PackingCupcake {
 
         while (testCases --> 0)
         {
-            int numberOfCupcakes = getInteger();
-            System.out.println(getMaximumCupcake(numberOfCupcakes));
+            numberOfCupcakes = getInteger();
+            System.out.println(getMaximumCupcake());
         }
     }
 
-    int getMaximumCupcake(int numberOfCupcakes)
+    int getMaximumCupcake()
     {
         return numberOfCupcakes / 2 + 1;
     }
