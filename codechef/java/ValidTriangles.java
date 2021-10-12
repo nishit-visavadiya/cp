@@ -4,23 +4,44 @@ import java.util.Scanner;
 
 public class ValidTriangles {
 
+    Scanner sc = new Scanner(System.in);
+
+    int a, b, c;
+
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in);
+        ValidTriangles validTriangles = new ValidTriangles();
+        validTriangles.executeTestCases();
+    }
 
-        int testCases = sc.nextInt();
+    void executeTestCases() {
+        int testCases = getInteger();
 
-        while (testCases -- > 0)
+        while (testCases --> 0)
         {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int c = sc.nextInt();
+            a = sc.nextInt();
+            b = sc.nextInt();
+            c = sc.nextInt();
 
-            if (a + b + c == 180)
-                System.out.println("YES");
-            else
-                System.out.println("NO");
+            System.out.println(triangleIsValid());
         }
     }
 
+    String triangleIsValid()
+    {
+        if (sumOfAnglesAreEqualTo())
+            return "YES";
+        else
+            return "NO";
+    }
+
+    boolean sumOfAnglesAreEqualTo()
+    {
+        return a + b + c == 180;
+    }
+
+    int getInteger()
+    {
+        return sc.nextInt();
+    }
 }
