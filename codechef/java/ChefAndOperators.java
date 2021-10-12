@@ -47,11 +47,6 @@ public class ChefAndOperators {
         return A > B;
     }
 
-    boolean bothAreEqual()
-    {
-        return A == B;
-    }
-
     int getInteger()
     {
         return scanner.nextInt();
