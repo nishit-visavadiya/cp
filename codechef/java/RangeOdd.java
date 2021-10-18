@@ -4,17 +4,34 @@ import java.util.Scanner;
 
 public class RangeOdd {
 
+    Scanner sc = new Scanner(System.in);
+
+    int left, right;
+
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in);
+        RangeOdd rangeOdd = new RangeOdd();
+        rangeOdd.execute();
+    }
 
-        int left = sc.nextInt();
-        int right = sc.nextInt();
+    void execute()
+    {
+        left = getInteger();
+        right = getInteger();
 
         for (int i = left; i <= right; i++)
         {
-            if (i % 2 != 0)
-                System.out.print(i + " ");
+            if (isRangeOdd(i))
+                System.out.println(i + " ");
         }
+    }
+
+    int getInteger() {
+        return sc.nextInt();
+    }
+
+    boolean isRangeOdd(int i)
+    {
+        return i % 2 != 0;
     }
 }
